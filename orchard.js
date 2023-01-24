@@ -129,6 +129,8 @@ while (acresLeft > 0) {
     {acresLeft -= averageDailyAcres}
 }
 
+console.log(days)
+
 
 // PROBLEM 4
 
@@ -202,16 +204,40 @@ console.log(pinkTons)
 
 // CODE HERE 
 
+let fujiPounds = 0
+let galaPounds = 0
+let pinkPounds = 0
+
 for (let i = 0; i < fujiTons.length; i++){
     fujiTons[i] *= 2000
  }
 
-function sumArray()
-let fujiPounds = 
-let galaPounds = 0
-let pinkPounds = 0
+for (let i=0; i < galaTons.length; i++){
+  galaTons[i] *= 2000
+}
+
+for (let i = 0; i < pinkTons.length; i++){
+  pinkTons[i] *= 2000
+}
+
+ 
+ for (let i = 0; i < fujiTons.length; i++){
+    fujiPounds += fujiTons[i]
+ }
+
+for (let i = 0; i < galaTons.length; i++){
+  galaPounds += galaTons[i]
+}
+
+for (let i = 0; i < pinkTons.length; i++){
+  pinkPounds += pinkTons[i]
+}
+ 
+
 
 console.log(fujiPounds)
+console.log(galaPounds)
+console.log(pinkPounds)
 
 
 
@@ -236,9 +262,13 @@ console.log(fujiPounds)
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+let fujiProfit = (fujiPounds / fujiPrice)
+let galaProfit = (galaPounds / galaPrice)
+let pinkProfit = (pinkPounds / pinkPrice)
+
+console.log(fujiProfit)
+console.log(galaProfit)
+console.log(pinkProfit)
 
 
 
@@ -256,3 +286,7 @@ console.log(fujiPounds)
 */
 
 // CODE HERE
+
+let totalProfit = (fujiProfit + galaProfit + pinkProfit)
+
+console.log(totalProfit)
